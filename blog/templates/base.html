@@ -1,5 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <p>Hi there!</p>
-    <p>It works!</p>
+<html>
+    <head>
+        <title>Мой бложик</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Blog</a></h1>
+        </div>
+
+        {% for post in posts %}
+
+        <div>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.content }}</p>
+        </div>
+
+        {% endfor %}
+    </body>
 </html>

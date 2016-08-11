@@ -10,3 +10,7 @@ class Article(models.Model):
     content = models.TextField()
     create_date = models.DateTimeField(auto_now_add=True)
     modify_date = models.DateTimeField(auto_now=True)
+    published = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.title
